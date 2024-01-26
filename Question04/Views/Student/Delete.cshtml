@@ -1,0 +1,53 @@
+﻿@model LibrariesStage01.Models.Student
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this student record?</h3>
+<div>
+    <h4>Student Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address) @*Change for question 5*@
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        @Html.ActionLink("Back to List", "Index");
+    }
+</div>
+

@@ -1,0 +1,24 @@
+﻿@model Question03.Models.PalindromeViewModel
+@{
+    ViewBag.Title = "StoredData";
+}
+
+<h2>Stored Data</h2>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Input Value</th>
+        <th>Output Value</th>
+    </tr>
+
+    @foreach (var item in Model.StoredData)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.InputValue</td>
+            <td>@item.OutputValue</td>
+        </tr>
+    }
+</table>
+
